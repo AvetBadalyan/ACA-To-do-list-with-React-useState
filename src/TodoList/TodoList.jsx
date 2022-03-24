@@ -1,11 +1,12 @@
-import React from 'react'
-import Todo from '../Todo/Todo'
+import React from "react";
+import Todo from "../Todo/Todo";
 
-export default function TodoList() {
+export default function TodoList({ toDoList }) {
   return (
-      <div>
-          <Todo />
-          
+    <div>
+      {toDoList.map((todo) => {
+        return <Todo todo={todo} />;
+      })}
     </div>
-  )
+  );
 }

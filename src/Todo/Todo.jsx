@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function Todo() {
+export default function Todo({todo}) {
   return (
-    <div>Todo</div>
+    <div>{todo.task}</div>
   )
 }
