@@ -1,0 +1,9 @@
+.completed-style {
+   text-decoration: line-through;
+}
+
+.task {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
