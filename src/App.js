@@ -23,8 +23,8 @@ function App() {
   };
 
   const taskDeleter = (id) => {
-     setToDoList(toDoList.filter((task) => task.id !== id)); 
-  }
+    setToDoList(toDoList.filter((task) => task.id !== id));
+  };
 
   const addNewTask = (inputValue) => {
     setToDoList([
@@ -43,7 +43,6 @@ function App() {
         addNewTask={addNewTask}
         taskDeleter={taskDeleter}
       />
-      
     </div>
   );
 }
