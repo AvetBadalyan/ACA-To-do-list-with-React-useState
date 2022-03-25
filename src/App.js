@@ -4,18 +4,7 @@ import React, { useState } from "react";
 import TodoList from "./TodoList/TodoList";
 
 function App() {
-  const [toDoList, setToDoList] = useState([
-    {
-      id: 1,
-      task: "task 1",
-      complete: true,
-    },
-    {
-      id: 2,
-      task: "task 2",
-      complete: false,
-    },
-  ]);
+  const [toDoList, setToDoList] = useState([]);
 
   const toggleHandler = (id) => {
     let mapped = toDoList.map((task) => {
@@ -33,13 +22,15 @@ function App() {
     setToDoList(filtered);
   };
 
+  const taskDeleter = (id) => {
+     setToDoList(toDoList.filter((task) => task.id !== id)); 
+  }
+
   const addNewTask = (inputValue) => {
-    let oldArray = [...toDoList];
-    oldArray = [
-      ...oldArray,
-      { id: toDoList.length + 1, task: inputValue, complete: false },
-    ];
-    setToDoList(oldArray);
+    setToDoList([
+      ...toDoList,
+      { id: Math.random().toFixed(3), task: inputValue, complete: false },
+    ]);
   };
 
   return (
@@ -50,7 +41,9 @@ function App() {
         toggleHandler={toggleHandler}
         filterHandler={filterHandler}
         addNewTask={addNewTask}
+        taskDeleter={taskDeleter}
       />
+      
     </div>
   );
 }

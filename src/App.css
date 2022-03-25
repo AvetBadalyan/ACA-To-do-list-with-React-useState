@@ -1,3 +1,20 @@
 .App {
   text-align: center;
+  background-color: black;
+  color: orangered;
+  height: 100vh;
+  width: 100vw;
+  font-size: large;
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: orangered;
+  color: white;
 }

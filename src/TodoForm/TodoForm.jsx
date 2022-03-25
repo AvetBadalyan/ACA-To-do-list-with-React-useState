@@ -21,8 +21,9 @@ export default function TodoForm({addNewTask}) {
           type="text"
           onChange={ChangeHandler}
           placeholder="Please write your task..."
-              />
-              <input type="submit" value="Add the task" />
+        />
+        <button type="submit">Add the task </button>
+    
       </form>
     </div>
   );
