@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import {myCustumTypes} from "../App"
 
-export default function TodoForm({addNewTask}) {
+export default function TodoForm({ dispatch }) {
   const [inputValue, setInputValue] = useState("");
 
   const ChangeHandler = (e) => {
@@ -9,7 +10,7 @@ export default function TodoForm({addNewTask}) {
 
   const SubmitHandler = (e) => {
     e.preventDefault();
-    addNewTask(inputValue);
+    dispatch({ type: myCustumTypes.ADD_NEW_TASK, inputValue: inputValue });
     setInputValue("");
   };
 
